@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIT Solutions LLP - IT Services, Staffing & Angel Investing</title>
+    <meta name="description" content="JIT Solutions LLP offers IT/Non-IT Staffing, IT Services, and Angel Investing with over 20 years of experience. Based in Hyderabad, India.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #2d2d2d;
+            background: #f5f7fa;
+        }
+
+        header {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 1.2rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffeb3b;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #1e3a8a;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: #1e3a8a;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: #4b5563;
+        }
+
+        .about, .contact {
+            background: #e5e7eb;
+            border-radius: 12px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4b5563;
+            text-align: justify;
+        }
+
+        .contact .contact-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact .contact-info p {
+            font-size: 1rem;
+            color: #4b5563;
+        }
+
+        .contact .contact-info .email {
+            font-size: 0.9rem;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        .contact .contact-button {
+            display: block;
+            max-width: 200px;
+            margin: 20px auto;
+            padding: 12px;
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .contact .contact-button:hover {
+            background: #2563eb;
+        }
+
+        footer {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .logo-text {
+                font-size: 1.4rem;
+            }
+
+            .logo-img {
+                height: 30px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .about p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="JIT Solutions Logo" class="logo-img">
+                <div class="logo-text">JIT Solutions LLP</div>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to JIT Solutions LLP</h1>
+            <p>Empowering businesses with premier IT/Non-IT Staffing, IT Services, and Angel Investing for over 20 years.</p>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>IT/Non-IT Staffing</h3>
+                <p>Connecting you with top-tier talent to drive your business forward with seamless staffing solutions.</p>
+            </div>
+            <div class="service-card">
+                <h3>IT Services</h3>
+                <p>Delivering cutting-edge IT solutions, from software development to infrastructure management.</p>
+            </div>
+            <div class="service-card">
+                <h3>Angel Investing</h3>
+                <p>Fueling innovation by investing in promising startups with strategic guidance and capital.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <h2>About Us</h2>
+        <p>At JIT Solutions LLP (Janaki IT Solutions), we are architects of innovation, weaving technology and talent into transformative solutions. With over 20 years of trailblazing expertise, we empower businesses through unparalleled IT and Non-IT staffing, cutting-edge IT services, and visionary angel investing. Based in the vibrant tech hub of Hyderabad, our mission is to ignite progress, foster creativity, and deliver measurable impact. From connecting global enterprises with exceptional talent to nurturing the next generation of startups, we are your trusted partner in shaping a future where possibilities are limitless.</p>
+    </section>
+
+    <section id="contact" class="section contact">
+        <h2>Contact Us</h2>
+        <a href="mailto:sravanthiharithasa@gmail.com" class="contact-button">Contact Us</a>
+        <div class="contact-info">
+            <p>Address: Jayabheri Silicon Towers, 3rd Floor, Hitech City Rd, Kothaguda, Hyderabad, Telangana 500032</p>
+            <p>Email: <a href="mailto:sravanthiharithasa@gmail.com" class="email">sravanthiharithasa@gmail.com</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 JIT Solutions LLP. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
